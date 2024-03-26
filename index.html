@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Interactive rating component</title>
+  </head>
+  <body>
+    <!-- #Rating state -->
+    <div class="rating-state" data-rating-state>
+      <figure>
+        <img src="./assets/images/icon-star.svg">
+      </figure>
+
+      <div class="rating-state-content">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+        <ul class="rating-state-list">
+          <li class="rating-state-item" data-number>
+            <span>1</span>
+          </li>
+          <li class="rating-state-item" data-number>
+            <span>2</span>
+          </li>
+          <li class="rating-state-item" data-number>
+            <span>3</span>
+          </li>
+          <li class="rating-state-item" data-number>
+            <span>4</span>
+          </li>
+          <li class="rating-state-item" data-number>
+            <span>5</span>
+          </li>
+        </ul>
+        <button class="btn" data-btn>
+          <span>Submit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- #Thank you state -->
+    <div class="thank-you-state" data-thank-you-state>
+      <figure>
+        <img src="./assets/images/illustration-thank-you.svg">
+      </figure>
+
+      <div class="thank-you-state-content">
+        <h3>You selected 4 out of 5</h3>
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+      </div>
+    </div>
+
+    <!-- custom js link -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

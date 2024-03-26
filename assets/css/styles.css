@@ -1,0 +1,247 @@
+/*-----------------------------*\
+#ROOT
+\*-----------------------------*/
+
+:root {
+    /**
+      * Colors
+      */
+
+    /* Primary */
+    --Orange: hsl(25, 97%, 53%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(218, 13%, 25%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+    /**
+      * Typography
+      */
+
+    /* Body Copy */
+    --Font-size: 15px;
+
+    /* font family */
+    --font-family: "Overpass", sans-serif;
+}
+
+/*-----------------------------*\
+  #RESET
+\*-----------------------------*/
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    color: var(--White);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--Font-size);
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+::selection {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+::-webkit-scrollbar {
+    background-color: var(--Very-Dark-Blue);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--Orange);
+    border-radius: 4px;
+}
+
+/*-----------------------------*\
+  #COMPONENT
+\*-----------------------------*/
+
+/**
+  * btns
+  */
+.btn {
+  background-color: var(--Orange);
+  border-radius: 100px;
+  color: var(--White);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: .4s;
+  height: 45px;
+}
+
+.btn:hover {
+  transition: .4s;
+  color: var(--Orange);
+  background-color: var(--White);
+}
+
+/*-----------------------------*\
+  #Rating state start
+\*-----------------------------*/
+
+.rating-state {
+  background-color: var(--Dark-Blue);
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  height: auto;
+  transition: .4s;
+}
+
+.rating-state.active { display: none; }
+
+.rating-state figure {
+  background-color: var(--Medium-Grey);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+
+.rating-state .rating-state-content h1 { margin-bottom: 20px; }
+
+.rating-state .rating-state-content p {
+  color: var(--Light-Grey);
+  line-height: 1.5;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.rating-state .rating-state-content .rating-state-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.rating-state .rating-state-content .rating-state-list .rating-state-item {
+  background-color: var(--Medium-Grey);
+  color: var(--Light-Grey);
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: grid;
+  transition: .2s;
+  place-items: center;
+  cursor: pointer;
+}
+
+.rating-state .rating-state-content .rating-state-list .rating-state-item:hover {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+  transition: .2s;
+}
+
+.rating-state .rating-state-content .rating-state-list .rating-state-item.active {
+  background-color: var(--Orange);
+  color: var(--White);
+  transition: .2s;
+}
+
+/*-----------------------------*\
+  #Thank you state start
+\*-----------------------------*/
+
+.thank-you-state {
+  background-color: var(--Dark-Blue);
+  padding: 40px 20px;
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  display: none;
+}
+
+.thank-you-state.active { display: block; }
+
+.thank-you-state img { margin: 0 auto 25px; }
+
+.thank-you-state .thank-you-state-content h3 {
+  margin: 0 auto 30px;
+  background-color: var(--Medium-Grey);
+  padding: 10px 15px;
+  border-radius: 100px;
+  width: max-content;
+  color: var(--Orange);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.thank-you-state .thank-you-state-content h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.thank-you-state .thank-you-state-content p {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: var(--Light-Grey);
+}
+
+/*-----------------------------*\
+  #MEDIA
+\*-----------------------------*/
+
+@media (min-width: 1200px) {
+  /* #Rating state start */
+  .rating-state { 
+    width: 420px; 
+    padding: 30px;
+  }
+  /* #Thank you state start */
+  .thank-you-state { 
+    width: 420px;
+    padding: 40px 25px; 
+  }
+}
